@@ -1,0 +1,41 @@
+/* styles.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.footer {
+  background-color: rgb(33, 48, 56);
+  color: rgb(188, 188, 188);
+  font-family: 'Roboto Slab', serif;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 0;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.footer .copyright {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer .contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer .address {
+  font-size: 16px;
+  text-align: left;
+}
+
+.footer .contact-email {
+  font-size: 16px;
+  text-align: right;
+}

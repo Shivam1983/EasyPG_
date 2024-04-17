@@ -1,0 +1,51 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.AddYourPG-body {
+  font-family: "Baloo Bhai", cursive;
+  color: white;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  background-image: url("https://i.postimg.cc/8cfwQSVB/bedroom-upload.gif");
+  background-size: cover;
+}
+
+.add-your-pg-form {
+  background: rgba(255, 255, 255, 0.2);
+
+  padding: 2em;
+  margin: 3em 0;
+  border: 3px solid white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 3px 4px rgb(231, 231, 231);
+}
+
+.add-your-pg-label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.add-your-pg-input,
+.add-your-pg-textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: rgba(150, 143, 143, 0.686);
+  box-shadow: 3px 3px rgb(242, 234, 234);
+}
+
+.add-your-pg-submit {
+  background: teal;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  /* box-shadow: 5px solid 3px black; */
+}
+
+.add-your-pg-submit:hover {
+  background: #064180;
+}

@@ -1,0 +1,110 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.reachus-main {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 85px;
+  
+}
+
+.reachus-body {
+  background-image: url("https://static.wixstatic.com/media/3c579b_2a218e3650134fbe99662242e9d594f6~mv2_d_3280_2149_s_2.jpg/v1/fill/w_1600,h_1048,al_c,q_90/file.jpg");
+  background-size:auto;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.reachus-head {
+  position: relative;
+  top: 75px;
+  left: 100px;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.reachus-enter {
+  font-size: larger;
+  padding-left: 17px;
+  padding-top: 10px;
+}
+
+.reachus-inputin {
+  color: rgb(5, 4, 4);
+  font-weight: 500;
+  border-radius: 10px;
+  height: 500px;
+  width: 50%;
+  margin-right: 15px;
+  border: 1px solid black;
+  /* background: rgb(195, 187, 179); */
+  background-color: rgb(138, 145, 147);
+
+  box-shadow: 0px 25px 30px rgba(255, 255, 255, 0.7);
+}
+
+.reachus-input {
+  position: relative;
+  width: 95%;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.reachus-input input {
+  
+  width: 100%;
+  height: 50px;
+  /* padding-top: 1.1rem; */
+  /* padding-left: 9px; */
+  /* margin: 5px; */
+  outline: none;
+  border: 1px solid #8c8c8c;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+.reachus-input label {
+  position: absolute;
+  top: 45%;
+  left: 20px;
+  font-size: 1.1rem;
+  color: #8c8c8c;
+  transition: .2s;
+}
+
+.reachus-input input:focus ~ label,
+.reachus-input input:valid ~ label {
+  top: 25%;
+  font-size: .8rem;
+  color: #000;
+}
+
+.reachus-input input:focus {
+  border-width: 2px;
+  border-color: #0A66C3;
+}
+
+.reachus-callback {
+  position: relative;
+  top: 20%;
+  height: 32px;
+  background: #0A66C3;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-left: 20px;
+}
+
+.reachus-callback:hover {
+  background-color: #fff;
+  color: #0A66C3;
+}
+
+
+

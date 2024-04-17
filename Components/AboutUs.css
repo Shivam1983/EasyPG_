@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+ /* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
+
+.main-container-about {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    top: 40px;
+    background-color: #ddd;
+}
+
+.about-section {
+    height: 100vh;
+    width: 100%;
+    padding: 90px 0;
+}
+
+.about-image {
+    height: 370px;
+    width: 370px;
+}
+
+.about-content {
+    width: 1050px;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    border-right: 18px solid rgb(42, 41, 41);
+}
+
+.about-text {
+    width: 540px;
+    margin-left: 25px;
+}
+
+.about-text h2 {
+    font-size: 90px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about-text h5 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.about-text span {
+    color: #4070f4;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.about-data {
+    margin-top: 30px;
+}
+
+.about-hire {
+    font-size: 18px;
+    background: #4070f4;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.about-hire:hover {
+    background: #000;
+    border: 1px solid #4070f4;
+}
+
+.about-cards {
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(1, 75, 75);
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.about-card {
+    width: 100%;
+    max-width: 540px;
+}
+
+.about-row {
+    margin: 0;
+}
+
+.about-col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.about-img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.about-card-body {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    margin-left: 25px;
+}
+
+.about-card-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.about-card-text {
+    font-size: 16px;
+    line-height: 22px;
+}

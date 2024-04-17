@@ -1,0 +1,162 @@
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.home-page-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://i.ibb.co/gzRLcxX/bg2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+
+.home-page-h1 {
+  padding-top: 80px;  
+  font-size: 36px;
+  padding-left: auto auto;
+  text-align: center;
+}
+
+.home-page-h1+p{
+  text-align: center;
+  color: goldenrod !important;
+  font-size: 20px;
+}
+
+.home-page-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.home-page-search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.home-page-search-button {
+  background-color: rgb(223, 182, 78);
+  color: white;
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.home-page-search-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: goldenrod;
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+.home-page-carousel-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.home-page-carousel-slides {
+  display: none;
+}
+
+.home-page-image {
+  text-align: center;
+  padding: 10px;
+}
+
+.home-page-reviews {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-wrap: wrap;
+}
+
+.home-page-review {
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.home-page-review h4 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.home-page-review p {
+  font-size: 16px;
+  color: #555;
+}
+
+.home-page-add-review-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.home-page-add-review-form>button {
+  font-weight: 15px;
+  padding: 10px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.home-page-alert {
+  width: 500px;
+  margin: auto;
+  border: 2px solid gold;
+}
+
+.home-page-h1 {
+  margin-top: 6px;
+  color: rgb(212, 152, 0);
+  word-spacing: 8px;
+  font-family: serif;
+  font-size: 50px;
+}
+
+.home-page-box {
+  width: 400px; 
+  height: 550px; 
+  margin: 20px; 
+}
+
+.home-page-box img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+}
+
+.home-page-box:hover {
+  box-shadow: 10px 10px 10px rgba(216, 184, 103, 0.653);
+  transition-duration: 0.4s;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 990px) {
+  .home-page-box { 
+    height: 285.6px;
+  }
+}
+
+

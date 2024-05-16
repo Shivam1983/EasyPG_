@@ -4,8 +4,6 @@ import IndividualIntervalsExample from "./IndividualIntervalsExample";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BlogCard from "./BlogCard";
 import CustomerReview from "./CustomerReview";
-import UsersList from "./UsersList";
-import Test from "./Test";
 import {fetchReviews} from "./APIs/reviewApi";
 import {fetchblogs} from "./APIs/blogApi";
 import AddPg from "./addPG";

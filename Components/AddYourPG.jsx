@@ -1,45 +1,117 @@
-import React, { useEffect } from 'react';
+// AddYourPG.js
+
+import React, { useState } from 'react';
 import './AddYourPG.css';
 
 function AddYourPG() {
-    useEffect(() => {
-        function handleSubmit(event) {
-            event.preventDefault(); // Prevent form submission
-            document.body.style.backgroundImage = "url('https://i.ibb.co/1ztdgWf/Whats-App-Image-2023-12-03-at-18-47-47-808541a1.jpg')";
-        }
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [city, setCity] = useState('');
+  const [title, setTitle] = useState('');
+  const [price, setPrice] = useState('');
+  const [count, setCount] = useState('');
 
-        const form = document.getElementById('addPropertyForm');
-        form.addEventListener('submit', handleSubmit);
+  const handleFileSelect = (acceptedFiles) => {
+    setSelectedFile(acceptedFiles[0]);
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    try {
+      const formData = new FormData();
+      formData.append('city', city); // Assuming title is the title
+      formData.append('title', title);
+      formData.append('count', count); // Assuming count is the count
+      formData.append('file', selectedFile);
+  
+      const response = await fetch('http://localhost:8080/pg/rooms/', {
+        method: 'POST',
+        body: formData,
+      });
+      if (response.ok) {
+        console.log('Image uploaded successfully!');
+        window.alert('Property added successfully!');
+        setSelectedFile(null);
+        setCity('');
+        setTitle('');
+        setPrice('');
+        setCount('');
+        // Handle success (e.g., show a success message)
+      } else {
+        console.error('Error uploading image:', response.statusText);
+        window.alert('Error uploading image:', response.statusText);
+        // Handle error (e.g., show an error message)
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };  
+  return (
+    <div className="AddYourPG-body">
+      <div className="container">
+        <br /><br /><br /><br /><br />
+        <h1>Add Property</h1>
 
-        return () => {
-            form.removeEventListener('submit', handleSubmit);
-        };
-    }, []); // Empty dependency array ensures that this effect runs only once after component mount
+        <form className="add-your-pg-form" onSubmit={handleSubmit}>
+          <label className="add-your-pg-label" htmlFor="city">City:</label>
+          <input
+            className="add-your-pg-input"
+            type="text"
+            id="city"
+            name="city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            required
+          />
 
-    return (
-        <div className="AddYourPG-body">
-        <div className="container">
-            <br /><br /><br /><br /><br />
-            <h1>Add Property</h1>
+          <label className="add-your-pg-label" htmlFor="title">Title</label>
+          <input
+            className="add-your-pg-input"
+            type="text"
+            id="title"
+            name="title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
 
-            <form className="add-your-pg-form" id="addPropertyForm" action="process_property.php" method="post">
-                <label className="add-your-pg-label" htmlFor="propertyType">Property Type:</label>
-                <input className="add-your-pg-input" type="text" id="propertyType" name="propertyType" required />
+          <label className="add-your-pg-label" htmlFor="price">Price:</label>
+          <input
+            className="add-your-pg-input"
+            type="text"
+            id="price"
+            name="price"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            required
+          />
 
-                <label className="add-your-pg-label" htmlFor="location">Location:</label>
-                <input className="add-your-pg-input" type="text" id="location" name="location" required />
+          <label className="add-your-pg-label" htmlFor="count">Number Of Rooms:</label>
+          <textarea
+            className="add-your-pg-textarea"
+            id="count"
+            name="count"
+            rows="4"
+            value={count}
+            onChange={(e) => setCount(e.target.value)}
+            required
+          ></textarea>
 
-                <label className="add-your-pg-label" htmlFor="price">Price:</label>
-                <input className="add-your-pg-input" type="text" id="price" name="price" required />
+          <div className="dropzone">
+            <input type="file" onChange={(e) => handleFileSelect(e.target.files)} />
+            {selectedFile ? (
+              <p>Selected file: {selectedFile.name}</p>
+            ) : (
+              <>              <p>Upload Image of Pg/Hostel Room..</p>
+              <p>Drag 'n' drop an image here or click to select a file</p></>
 
-                <label className="add-your-pg-label" htmlFor="description">Description:</label>
-                <textarea className="add-your-pg-textarea" id="description" name="description" rows="4" required></textarea>
+            )}
+          </div>
 
-                <input className="add-your-pg-submit" type="submit" value="Submit" />
-            </form>
-        </div>
-    </div>  
-    );
+          <input className="add-your-pg-submit" type="submit" value="Submit" onClick={handleSubmit}/>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default AddYourPG;

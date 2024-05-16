@@ -1,0 +1,8 @@
+@media screen and (max-width: 690px){
+    .home-page-review .review{
+        display: none;
+    }
+    .home-page-review img{
+        width: 100%;
+    }
+}

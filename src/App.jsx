@@ -7,20 +7,20 @@ import HomePage from "../Components/HomePage";
 import Booking from "../Components/Booking";
 import Login from "../Components/Login";
 import ReachUs from "../Components/ReachUs";
+import ProfilePage from "../Components/ProfilePage";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<>
-        <HomePage />
+        <Route path="/" element={<><HomePage />
         <Footer />
         </>} />
-        <Route path="/signup" element={<HomePage />} />
-        <Route path="/search" element={<Booking />} />
-        <Route path="/addpg" element={<AddYourPG />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<><ProfilePage/><Footer /></>} />
+        <Route path="/search" element={<><Booking /><Footer /></>} />
+        <Route path="/addpg" element={<><AddYourPG /><Footer /></>} />
+        <Route path="/login" element={<><Login /><Footer /></>} />
         <Route path="/aboutus" element={<>
         <AboutUs />
         <Footer />

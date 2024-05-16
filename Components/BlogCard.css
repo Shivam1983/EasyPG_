@@ -1,0 +1,14 @@
+.col.p-4 {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  /* Style the image */
+  .col-auto {
+    flex: 0; /* Do not grow or shrink */
+    max-width: 50%; /* Limit the image width */
+  }
+  
+  /* Optional: Add spacing around the image */
+  .image {
+    margin: 0 auto; /* Center the image horizontally */
+  }

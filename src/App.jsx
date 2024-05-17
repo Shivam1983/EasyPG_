@@ -8,6 +8,9 @@ import Booking from "../Components/Booking";
 import Login from "../Components/Login";
 import ReachUs from "../Components/ReachUs";
 import ProfilePage from "../Components/ProfilePage";
+import FeedBack from "../Components/FeedBack";
+import Signup from "../Components/APIs/SignUp/Signup";
+import OTP from "../Components/APIs/OTP/OTP";
 
 function App() {
   return (
@@ -17,14 +20,16 @@ function App() {
         <Route path="/" element={<><HomePage />
         <Footer />
         </>} />
-        <Route path="/signup" element={<><ProfilePage/><Footer /></>} />
+        <Route path="/signup" element={<><Signup/><Footer /></>} />
         <Route path="/search" element={<><Booking /><Footer /></>} />
         <Route path="/addpg" element={<><AddYourPG /><Footer /></>} />
         <Route path="/login" element={<><Login /><Footer /></>} />
+        <Route path="/otp" element={<OTP/>} />
         <Route path="/aboutus" element={<>
         <AboutUs />
         <Footer />
         </>} />
+        <Route path="/FeedBack" element={<FeedBack/>} />
         <Route path="/reachus" element={<>
         <ReachUs />
         <Footer />

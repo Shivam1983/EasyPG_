@@ -1,0 +1,33 @@
+.App {
+  height:30%;
+  width:45%;
+  margin-top: 15%;
+  text-align: center;
+  margin-left: 28%;
+  padding: 15px;
+  background-image: linear-gradient(315deg, #FFD36E, #FFFFFF, #FFD36E);
+  border-radius: 10px;
+}
+.otp-input {
+  font-size: 24px;
+  border: solid 2px #bbb;
+  margin-right: 10px;
+}
+
+.otp-input:last-child {
+  margin-right: 0;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+.btn-container button {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+.btn-container button:hover {
+  cursor: pointer;
+  background-color: #e5e5e5;
+}

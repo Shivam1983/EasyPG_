@@ -23,6 +23,7 @@ function Header() {
             <Nav.Link as={Link} to="/signup">Create Your Account</Nav.Link>
             <Nav.Link as={Link} to="/login">Log In</Nav.Link>
             <Nav.Link as={Link} to="/AboutUs">About Us</Nav.Link>
+            <Nav.Link as={Link} to="/FeedBack">FeedBack</Nav.Link>
             <Nav.Link as={Link} to="/reachus">Reach Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -1,0 +1,81 @@
+.signup-container {
+    display: flex;
+    background-image: url('C:\Users\sumit kumar\Desktop\Final\Web_Development_Project\Components\APIs\SignUp\login.svg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .signup-form {
+    position: absolute;
+    top:3%;
+    bottom: 3%;
+    left: 45%;
+    padding: 70px;
+    padding-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 50%;
+  }
+  .already{
+    margin-left:70%;
+  }
+  .Name{
+    font-size:40px;
+    font-weight:500;
+  }
+  #name,#email,#phone,#password,#cpassword{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    height:1.5rem;
+    width:100%;
+    margin-bottom: 15px;
+  }
+  #gender{
+    height:1.5rem;
+  }
+  .input label{
+    font-size:large;
+  }
+  #birthday{
+    margin-right: 40%;
+    margin-bottom: 15px;
+    height:1.5rem;
+    border-radius:5px;
+  }
+  #gender{
+    border-radius: 5px;
+  }
+  .submit {
+    height: 35px;
+    width:115px;
+    background: #ffa53d;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-left: 0%;
+  }
+  .submit:hover{
+    background-color: #f3c493;
+    color: #ffa53d;
+  }
+  .reset {
+    height: 35px;
+    width:115px;
+    background:white;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    margin-left: 1%;
+  }
+  .reset:hover{
+    background-color: rgb(172, 172, 172);
+  }

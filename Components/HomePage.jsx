@@ -1,13 +1,13 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./HomePage.css";
 import IndividualIntervalsExample from "./IndividualIntervalsExample";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BlogCard from "./BlogCard";
 import CustomerReview from "./CustomerReview";
-import UsersList from "./UsersList";
-import Test from "./Test";
-import {fetchReviews} from "./APIs/reviewApi";
-import {fetchblogs} from "./APIs/blogApi";
+// import UsersList from "./UsersList";
+// import Test from "./Test";
+import { fetchReviews } from "./APIs/reviewApi";
+import { fetchblogs } from "./APIs/blogApi";
 import AddPg from "./addPG";
 const HomePage = () => {
   const [reviews, setReviews] = useState([]);
@@ -22,7 +22,7 @@ const HomePage = () => {
       const reviewsData = await fetchReviews();
       setReviews(reviewsData);
     } catch (error) {
-     console.log("oops error in fetching reviews");
+      console.log("oops error in fetching reviews");
     }
   };
   const fetchBlogsData = async () => {
@@ -30,10 +30,10 @@ const HomePage = () => {
       const blogsData = await fetchblogs();
       setblogs(blogsData);
     } catch (error) {
-     console.log("oops error in fetching blogs");
+      console.log("oops error in fetching blogs");
     }
   };
-  
+
   const submitReview = () => {
     const userName = document.getElementById("userName").value;
     const userReview = document.getElementById("userReview").value;
@@ -62,7 +62,7 @@ const HomePage = () => {
         <h1 className="home-page-h1 text-3xl font-bold underline">
           Welcome to EASY PG
         </h1>
-       {/* <Test/> */}
+        {/* <Test/> */}
         <p style={{ color: "rgb(96, 96, 96)" }}>Finding PG is now easy</p>
         <div className="home-page-image">
           <a href="#">
@@ -73,21 +73,26 @@ const HomePage = () => {
           </a>
         </div>
         {/* <div><AddPg/></div> */}
-        <div className="home-page-search-container">
-          <input
+        { <div className="home-page-search-container">
+          {/* <input
             type="text"
             id="search"
             className="home-page-search"
             placeholder="Search location.."
-          />
+          /> */}
+           
+        
           <button
             id="search-button"
             className="home-page-search-button"
-            onClick={handleSearch}
+            onClick={() => window.location.href = "/search"}
           >
-            Search
+            Book Your Hostel/PG Now &#x2192;
           </button>
-        </div>
+          <br />
+        </div> }
+
+
         <div>
           <hr />
           <div className="trial">
@@ -102,16 +107,16 @@ const HomePage = () => {
               <br />
               <br />
               <div className="row mb-2">
-              {blogs.map((blog, index) => (
-                <BlogCard
-                  key={index}
-                  title={blog.title}
-                  text={blog.text}
-                  category={blog.category}
-                  imgSrc={blog.imgsrc}
-                  date={blog.date}
-                />
-              ))}
+                {blogs.map((blog, index) => (
+                  <BlogCard
+                    key={index}
+                    title={blog.title}
+                    text={blog.text}
+                    category={blog.category}
+                    imgSrc={blog.imgsrc}
+                    date={blog.date}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -143,7 +148,7 @@ const HomePage = () => {
             <form className="home-page-add-review-form">
               <h3 className="text-3xl font-bold underline">Add Your Review</h3>
               <input
-                type="text" 
+                type="text"
                 id="userName"
                 placeholder="Your Name"
                 className="form-control"
